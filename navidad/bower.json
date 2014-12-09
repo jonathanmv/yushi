@@ -2,6 +2,7 @@
   "name": "navidad",
   "private": true,
   "dependencies": {
-    "jquery": "~1.11.1"
+    "jquery": "~1.11.1",
+    "asteroid": "~0.6.1"
   }
 }

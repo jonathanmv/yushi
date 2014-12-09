@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="css/ion.rangeSlider.skinHTML5.css">
     <link rel="stylesheet" href="css/morphbutton.css">
     <link rel="stylesheet" href="css/morphbuttoncontent.css">
+    <link rel="stylesheet" href="css/ns-default.css">
+    <link rel="stylesheet" href="css/ns-style-attached.css">
     <script src="js/modernizr.custom.js"></script>
     <!--[if lt IE 9]>
         <script src="js/html5.js"></script>
@@ -74,10 +76,10 @@
                                             <h3>Resumen</h3>
                                             <p class='note'>Vas a comprar <span class="cantidadYushis"></span> yushis por $<span class="precio"></span>.000.<br/><small>Alcanzan para <span class="cantidadPersonas"></span> personas, 4 yushis por persona.<br/>Te llamamos o escribimos para confirmar los sabores y dirección de entrega.</small></p>
                                             <form>
-                                                <p><label>Nombre</label><input type="text" /></p>
-                                                <p><label>Email</label><input type="text" /></p>
-                                                <p><label>Celular</label><input type="text" /></p>
-                                                <p><button>Comprar</button></p>
+                                                <p><label>Nombre</label><input id="nombre" type="text" /></p>
+                                                <p><label>Email</label><input id="email" type="text" /></p>
+                                                <p><label>Celular</label><input id="celular" type="text" /></p>
+                                                <p><button id="comprar">Comprar</button></p>
                                             </form>
                                         </div>
                                     </div>
@@ -118,7 +120,8 @@
                 </div>
                 <!-- /.wrap -->
             </div>
-            <!-- /.promo clearfix -->
+            <!-- /.promo clearfix - - >
+
             <div class="discover clearfix">
                 <div class="wrap">
                     <div class="discover-content clearfix">
@@ -139,11 +142,11 @@
                         <div class="discover-img-inside"><img src="upload/discover.png" height="486" width="634" alt=""></div>
                     </div>
                 </div>
-                <!-- /.wrap -->
+                <! - - /.wrap - - >
             </div>
-            <!-- /.discover clearfix -->
+            <! - - /.discover clearfix - - >
             <div class="video clearfix">
-                <div class="wrap">
+                <! - - <div class="wrap">
                     <div class="video-title">Explore. Walk &amp; Ride in action</div>
                     <div class="video-subtitle">Just try it for yourself</div>
                     <div class="video-block" width="814" height="458">
@@ -157,12 +160,12 @@
                             <li><a href="#" class="social-google">via <strong>Google+</strong></a></li>
                         </ul>
                     </div>
-                </div>
-                <!-- /.wrap -->
+                </div> - - >
+                <! - - /.wrap - - >
             </div>
-            <!-- /.videos clearfix -->
+            <! - - /.videos clearfix - - >
             <div class="comments clearfix">
-                <div class="wrap">
+                <! - - <div class="wrap">
                     <div class="tab">
                         <div class="box visible">
                             <h4>People talking about <a href="#">#WalkandRide</a></h4>
@@ -184,10 +187,10 @@
                         <a href="#" class="tab-prev"></a>
                         <a href="#" class="tab-next"></a>
                     </div>
-                </div>
-                <!-- /.wrap -->
+                </div> - - >
+                <! - - /.wrap - - >
             </div>
-            <!-- /.comments clearfix -->
+            <! - - /.comments clearfix - - >
             <div class="simple clearfix">
                 <div class="wrap">
                     <div class="simple-content">
@@ -204,9 +207,9 @@
                         <img src="upload/screen.png" height="508" width="587" alt="">
                     </div>
                 </div>
-                <!-- /.wrap -->
+                <! - - /.wrap - - >
             </div>
-            <!-- /.simple clearfix -->
+            <! - - /.simple clearfix - - >
             <div class="newsletter clearfix">
                 <div class="wrap">
                     <div class="newsletter-title">our newsletter</div>
@@ -218,20 +221,23 @@
                     </div>
                     <p>If you want to recieve monthly updates from us just pop your email in the box. We think that spam is for jerks. And we are no jerks.</p>
                 </div>
-                <!-- /.wrap -->
+                <! - - /.wrap - - >
             </div>
-            <!-- /.newsletter clearfix -->
+            <! - - /.newsletter clearfix - - >
         </div>
-        <!-- /.spanning-columns -->
+        <! - - /.spanning-columns -->
     </div>
     <!-- /.main -->
     <footer>
         <div class="wrap">
-            <p>&copy; 2014 <strong>Walk &amp; Ride</strong>, All Rights Reserved</p>
+            <p>&copy; 2014 <strong>YUSHI</strong>, todos los derechos reservados</p>
         </div>
         <!-- /.wrap -->
     </footer>
     <script src="js/jquery.js"></script>
+    <script src="bower_components/ddp.js/src/ddp.js"></script>
+    <script src="bower_components/q/q.js"></script>
+    <script src="bower_components/asteroid/dist/asteroid.browser.js"></script>
     <script src="js/library.js"></script>
     <script src="js/script.js"></script>
     <script src="js/retina.js"></script>
@@ -242,71 +248,12 @@
 
 
     <script src="js/classie.js"></script>
+    <script src="js/notificationFx.js"></script>
     <script src="js/uiMorphingButton_fixed.js"></script>
-    <script>
-        (function() {
-            var docElem = window.document.documentElement, didScroll, scrollPosition;
+    <script src="js/uiMorphingButton_fixed.js"></script>
+    <script src="js/morphButtonInit.js"></script>
 
-            // trick to prevent scrolling when opening/closing button
-            function noScrollFn() {
-                window.scrollTo( scrollPosition ? scrollPosition.x : 0, scrollPosition ? scrollPosition.y : 0 );
-            }
 
-            function noScroll() {
-                window.removeEventListener( 'scroll', scrollHandler );
-                window.addEventListener( 'scroll', noScrollFn );
-            }
 
-            function scrollFn() {
-                window.addEventListener( 'scroll', scrollHandler );
-            }
-
-            function canScroll() {
-                window.removeEventListener( 'scroll', noScrollFn );
-                scrollFn();
-            }
-
-            function scrollHandler() {
-                if( !didScroll ) {
-                    didScroll = true;
-                    setTimeout( function() { scrollPage(); }, 60 );
-                }
-            };
-
-            function scrollPage() {
-                scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
-                didScroll = false;
-            };
-
-            scrollFn();
-
-            [].slice.call( document.querySelectorAll( '.morph-button' ) ).forEach( function( bttn ) {
-                new UIMorphingButton( bttn, {
-                    closeEl : '.icon-close',
-                    onBeforeOpen : function() {
-                        // don't allow to scroll
-                        noScroll();
-                    },
-                    onAfterOpen : function() {
-                        // can scroll again
-                        canScroll();
-                    },
-                    onBeforeClose : function() {
-                        // don't allow to scroll
-                        noScroll();
-                    },
-                    onAfterClose : function() {
-                        // can scroll again
-                        canScroll();
-                    }
-                } );
-            } );
-
-            // for demo purposes only
-            [].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) {
-                bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
-            } );
-        })();
-    </script>
 </body>
 </html>
