@@ -115,7 +115,7 @@
     if (pedidoRealizado) {
       $('.icon-close').click();
       var notification = new NotificationFx({
-        message : '<p>Pedido confirmado. En un momento nos comunicaremos por teléfono o email para ajustar detalles.</p>',
+        message : '<p>Pedido confirmado. En un momento nos comunicaremos por celular o email para ajustar detalles.</p>',
         layout : 'attached',
         effect : 'flip',
         type : 'notice'
