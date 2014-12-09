@@ -211,9 +211,9 @@ Navigation
 ========================================================================== */
 nav { background-color: #20362F; margin-top: -1px; }
 nav ul { list-style: none; padding: 0; }
-nav ul li { color: rgba(255, 255, 255, 0.6); display: block; border-bottom: 1px dotted rgba(255, 255, 255, 0.2); transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; padding-left: 0; position: relative; }
+nav ul li { color: rgba(255, 255, 255, 0.8); display: block; border-bottom: 1px dotted rgba(255, 255, 255, 0.2); transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; padding-left: 0; position: relative; }
 nav ul li:last-child { border: none; }
-nav ul li a { color: rgba(255, 255, 255, 0.6); display: block; padding: 20px; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; padding-left: 0; position: relative; }
+nav ul li a { color: rgba(255, 255, 255, 0.8); display: block; padding: 20px; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; padding-left: 0; position: relative; }
 nav ul li a:hover, nav ul li a:focus { text-decoration: none; color: rgba(255, 255, 255, 1); }
 #nav-toggle { position: absolute; right: 15px; top: 0; }
 #nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; }
