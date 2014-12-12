@@ -901,11 +901,28 @@ footer {
 }
 
 .discover-img img {
-    display: block
+    display: block;
+    width: 550px;
+    margin-top: 85px;
+
+    -webkit-border-top-left-radius: 30px;
+    -webkit-border-top-right-radius: 200px;
+    -webkit-border-bottom-right-radius: 30px;
+    -webkit-border-bottom-left-radius: 200px;
+
+    -moz-border-radius-topleft: 30px;
+    -moz-border-radius-topright: 200px;
+    -moz-border-radius-bottomright: 30px;
+    -moz-border-radius-bottomleft: 200px;
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 200px;
 }
 
 .discover-img-inside {
-    margin: 0 -40px
+    margin: 0 -30px;
 }
 
 /* sidebar --------------------------  */

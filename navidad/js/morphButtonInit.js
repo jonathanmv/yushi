@@ -35,7 +35,7 @@
 
     scrollFn();
 
-    [].slice.call( document.querySelectorAll( '.morph-button' ) ).forEach( function( bttn ) {
+    [].slice.call( document.querySelectorAll( '.morph-button.active' ) ).forEach( function( bttn ) {
         new UIMorphingButton(bttn, {
             closeEl : '.icon-close',
             onBeforeOpen : function() {
@@ -58,7 +58,7 @@
     } );
 
     // for demo purposes only
-    [].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) {
-        bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
-    } );
+    // [].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) {
+    //     bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
+    // } );
 })();
